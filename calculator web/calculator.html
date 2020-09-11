@@ -12,6 +12,11 @@
                 y=eval(x);
                 document.getElementById("res").value = y; 
             }
+            function back(){
+                te = document.getElementById("res").value; 
+                x = te.slice(0,-1);
+                document.getElementById("res").value=x;
+            }
 
         </script>
         <style>
@@ -51,6 +56,9 @@
             body{
                 background-color: rosybrown;
             }
+            .tab.cb{
+                color: brown;
+            }
 
 
         </style>
@@ -60,13 +68,15 @@
         <table border="1" align="center" class="tab">
             <tr>
                 <td colspan="4"><input type="text" id="res"></td>
-                <td rowspan="5"><input type="button" value="C" onclick="clr()"></td>
+                <td rowspan="3" class="cb"><input type="button" value="C" onclick="clr()"></td>
+               
             </tr>
             <tr>
                 <td ><input type="button" value="1" onclick="dis(value)" /></td>
                 <td><input type="button" value="2" onclick="dis(value)" /></td>
                 <td><input type="button" value="3" onclick="dis(value)" /></td>
                 <td><input type="button" value="/" onclick="dis(value)" /></td>
+                
             </tr>
             <tr>
                 <td><input type="button" value="4" onclick="dis(value)" /></td>
@@ -80,6 +90,7 @@
                 <td><input type="button" value="8" onclick="dis(value)" /></td>
                 <td><input type="button" value="9" onclick="dis(value)" /></td>
                 <td><input type="button" value="+" onclick="dis(value)" /></td>
+                <td rowspan="2" style="color: brown;" ><input type="button" value="back" onclick="back()"></td>
             </tr>
             <tr>
                 <td><input type="button" value="0" onclick="dis(value)" /></td>
