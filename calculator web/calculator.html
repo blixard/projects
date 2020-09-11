@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <script>
+            function dis(val){
+                document.getElementById("res").value+=val;
+                }
+            function clr(){
+                document.getElementById("res").value="";
+            }
+            function equals(){
+                x = document.getElementById("res").value;
+                y=eval(x);
+                document.getElementById("res").value = y; 
+            }
+
+        </script>
+        <style>
+            .calc{
+                margin: auto;
+                color: green;
+                text-align: center;
+                border: solid black 2px;
+                width: 50%;
+            }
+            input[type ="button"]{
+                width: 100%;
+                height:100%;
+                color: black;
+                background-color:antiquewhite;
+
+            }
+            input[type="text"]{
+                width: 100%;
+                height: 100%;
+                text-size-adjust: 100%;
+                text-align: center;
+                background-color: bisque;
+            }
+            .tab{
+                width: 70%;
+                height: 70%;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="calc">Calculator</div>
+        <table border="1" align="center" class="tab">
+            <tr>
+                <td colspan="3"><input type="text" id="res"></td>
+                <td colspan="1"><input type="button" value="C" onclick="clr()"></td>
+            </tr>
+            <tr>
+                <td ><input type="button" value="1" onclick="dis(value)" /></td>
+                <td><input type="button" value="2" onclick="dis(value)" /></td>
+                <td><input type="button" value="3" onclick="dis(value)" /></td>
+                <td><input type="button" value="/" onclick="dis(value)" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="dis(value)" /></td>
+                <td><input type="button" value="5" onclick="dis(value)" /></td>
+                <td><input type="button" value="6" onclick="dis(value)" /></td>
+                <td><input type="button" value="*" onclick="dis(value)" /></td>
+            </tr>
+            
+            <tr>
+                <td><input type="button" value="7" onclick="dis(value)" /></td>
+                <td><input type="button" value="8" onclick="dis(value)" /></td>
+                <td><input type="button" value="9" onclick="dis(value)" /></td>
+                <td><input type="button" value="+" onclick="dis(value)" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0" onclick="dis(value)" /></td>
+                <td><input type="button" value="." onclick="dis(value)" /></td>
+                <td><input type="button" value="-" onclick="dis(value)" /></td>
+                <td><input type="button" value="=" onclick="equals()" /></td>
+            </tr>
+            
+        </table>
+    </body>
+</html>
