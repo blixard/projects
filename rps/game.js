@@ -8,6 +8,9 @@ function play(rps){
     var cs = getValue(comp);
     var us = getValue(rps)
     var res = getResult(comp, rps)
+    if(res == "you won"){
+        win()
+    }
     document.getElementById("output").style.visibility = "visible";
     document.getElementById("comp").innerHTML = cs
     document.getElementById("user").innerHTML = us
@@ -42,4 +45,10 @@ function getResult(comp , rps){
         res = "you lost"
     }
     return res
+}
+
+function win(){
+    var img = document.createElement("img")
+    img.src = 'resource/win.png'
+    document.getElementById("winimg").appendChild(img)
 }
