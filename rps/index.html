@@ -38,7 +38,15 @@
                 <div class="card-body">
                     <h4 class="card-title">Results </h4>
                     <div id="res" class="card-text"></div>
-                    <div id="winimg"></div>
+                    <div id="winimg" class="resimg">
+                        <img class="resimg" src="resource/win.png" alt="">
+                    </div>
+                    <div id="lostimg" class="row resimgl">
+                        <img class="resimgl" src="resource/lost.png" alt="">
+                    </div>
+                    <div id="tieimg" class="row resimg">
+                        <img  src="" alt="">
+                    </div>
                 </div>
                 
             </div>
@@ -49,5 +57,7 @@
 </body>
 <script>
     document.getElementById("output").style.visibility = "hidden";
+    document.getElementById("winimg").style.visibility= "hidden";
+    document.getElementById("lostimg").style.visibility= "hidden";
 </script>
 </html>
