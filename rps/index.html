@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
     <script src="game.js"></script>
-    <title>Document</title>
+    <title>Rock Paper Scissor</title>
 </head>
 <body class="body">
    
@@ -23,13 +23,25 @@
             <div class="container card " >
                 <div class="card-body">
                     <h4>computer </h4>
-                <div id="comp" class="card-text"></div>
+                <div id="comp" class="card-text"> </div>
+                    <div class="userimg">
+                        <img class="userimg rock" id="crock" src="resource/rock.png" alt="">
+                        <img class="userimg paper" id="cpaper" src="resource/paper.png" alt="">
+                        <img class="userimg sci" id="csci" src="resource/scissor.png" alt="">
+                   
+                </div>
                 </div>
                 </div>
             <div class="container card " id="output">
                 <div class="card-body">
                     <h4 class="card-title">user </h4>
                 <div id="user" class="card-text"></div>
+                    <div class="userimg">
+                        <img class="userimg rock" id="urock" src="resource/rock.png" alt="">
+                        <img class="userimg paper" id="upaper" src="resource/paper.png" alt="">
+                        <img class="userimg sci" id="usci" src="resource/scissor.png" alt="">
+                    </div>
+                
                 </div>
                 
             </div>
@@ -59,5 +71,11 @@
     document.getElementById("output").style.visibility = "hidden";
     document.getElementById("winimg").style.visibility= "hidden";
     document.getElementById("lostimg").style.visibility= "hidden";
+    document.getElementById("urock").style.visibility="hidden";
+    document.getElementById("upaper").style.visibility="hidden";
+    document.getElementById("usci").style.visibility="hidden";
+    document.getElementById("crock").style.visibility="hidden";
+    document.getElementById("cpaper").style.visibility="hidden";
+    document.getElementById("csci").style.visibility="hidden";
 </script>
 </html>

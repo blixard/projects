@@ -8,6 +8,9 @@ function play(rps){
     var cs = getValue(comp);
     var us = getValue(rps)
     var res = getResult(comp, rps)
+    visimg(comp)
+    visimgu(rps)
+    
     resimg(res)
     document.getElementById("output").style.visibility = "visible";
     document.getElementById("comp").innerHTML = cs
@@ -63,4 +66,46 @@ function resimg(res){
     }
     
     
+}
+
+function visimg(comp){
+    if(comp==0){
+        document.getElementById("crock").style.visibility = "visible"
+        //document.getElementById("crock").style.visibility="hidden";
+        document.getElementById("cpaper").style.visibility="hidden";
+        document.getElementById("csci").style.visibility="hidden";
+    }
+    if(comp==1){
+        document.getElementById("cpaper").style.visibility = "visible"
+        document.getElementById("crock").style.visibility="hidden";
+        //document.getElementById("cpaper").style.visibility="hidden";
+        document.getElementById("csci").style.visibility="hidden";
+    }
+    if(comp==2){
+        document.getElementById("csci").style.visibility = "visible"
+        document.getElementById("crock").style.visibility="hidden";
+        document.getElementById("cpaper").style.visibility="hidden";
+        //document.getElementById("csci").style.visibility="hidden";
+    }
+}
+
+function visimgu(comp){
+    if(comp==0){
+        document.getElementById("urock").style.visibility = "visible"
+        //document.getElementById("crock").style.visibility="hidden";
+        document.getElementById("upaper").style.visibility="hidden";
+        document.getElementById("usci").style.visibility="hidden";
+    }
+    if(comp==1){
+        document.getElementById("upaper").style.visibility = "visible"
+        document.getElementById("urock").style.visibility="hidden";
+        //document.getElementById("cpaper").style.visibility="hidden";
+        document.getElementById("usci").style.visibility="hidden";
+    }
+    if(comp==2){
+        document.getElementById("usci").style.visibility = "visible"
+        document.getElementById("urock").style.visibility="hidden";
+        document.getElementById("upaper").style.visibility="hidden";
+        //document.getElementById("csci").style.visibility="hidden";
+    }
 }
