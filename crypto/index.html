@@ -4,48 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="style/index.css">
-    <script src='scripts/index.js'></script>
-    <title>Encrypt</title>
+    <link rel="stylesheet" href="./style/home.css">
+    <title>Encryptt</title>
 </head>
-<body onload="setVis()" class="body">
-    <div class="bbb container " id="mbody">
-        <div class="row badge badge-primary" id="level"></div>
-                <div class="row container">
-                    <div class="col ">
-                        <div class="card text-center">
-                            <h4 class="card-title">GET THIS</h4>
-                            <div class="card-text" id="word"></div>
-                        </div>
-                    </div>
-                    <div class="col ">
-                        <div class="col card text-center">
-                            <h4 class="card-title">YOU GOT</h4>
-                            <div id="check" class="card-text" >nothing typed</div>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-                
-            <input type="text" class="row container" id="text" autocapitalize="none">
-            <button class="row container btn btn-success" onclick="check()">check</button>
-            <div class="row container card text-center" id="correct">
-                <div class="card-title" style="text-align: center;"> <h3 >CORRECT</h4></div>
-                    <div><button class="btn btn-primary" onclick="next()">next</button></div>
-            </div>
-            <div class="btn-group row container" role="group" aria-label="Basic example" id="leveldone">
-                <button type="button" class="btn btn-secondary" onclick="window.location='./index.html'">replay</button>
-                <button type="button" class="btn btn-secondary" onclick="window.location='./levels/level0/index.html'">next </button>
-                <button type="button" class="btn btn-secondary" onclick="window.location='index.html'">home</button>
-              </div>
-              <div class="row badge badge-danger" id="wrong"></div>
-            
-        
+<body class="body">
+    <div class="container-fluid header ">
+        <h2>Encrypt</h2>
     </div>
-    <script>
-        document.getElementById("leveldone").style.visibility = "hidden";
-        document.getElementById("correct").style.visibility="hidden";
-    </script>
+    <div class="row container-fluid main text-center">
+        <div class="card container-fluid" >
+            <img src="res/1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Level-0</h5>
+              <p class="card-text">this is where it starts. A journey through different codes of encryption</p>
+              <a href="levels/level0/index.html" class="btn btn-primary">play</a>
+            </div>
+          </div>
+          <div class="card container-fluid" >
+            <img src="res/2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Level-1</h5>
+              <p class="card-text">this is where it starts. A journey through different codes of encryption</p>
+              <a href="levels/level1/index.html" class="btn btn-primary">play</a>
+            </div>
+          </div>
+          <div class="card container-fluid" >
+            <img src="res/3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Level-2</h5>
+              <p class="card-text">this is where it starts. A journey through different codes of encryption</p>
+              <a href="levels/level2/index.html" class="btn btn-primary">play</a>
+            </div>
+          </div>
+          <div class="card container-fluid">
+            <img src="res/4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Level-3</h5>
+              <p class="card-text">this is where it starts. A journey through different codes of encryption</p>
+              <a href="levels/level3/index.html" class="btn btn-primary">play</a>
+            </div>
+          </div>
+          <div class="card container-fluid" >
+            <img src="res/5.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Level-4</h5>
+              <p class="card-text">this is where it starts. A journey through different codes of encryption</p>
+              <a href="levels/level4/index.html" class="btn btn-primary">play</a>
+            </div>
+          </div>
+    </div>
+    <div class="container-fluid footer">&#169 blixard </div>
+    
+    
 </body>
 </html>
