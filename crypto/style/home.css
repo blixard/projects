@@ -4,16 +4,15 @@
     margin-right: 10%;
 }
 .header{
-    background-color: #282c34;
+    background-color:black;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
 }
 .header:hover{
-    background-color: black;
+    color: deeppink;
 }
 .main{
     padding: 5%;
@@ -38,4 +37,9 @@
     padding-left: 3%;
     padding-right: 3%;
 
+}
+
+.logo{
+    height: 10%;
+    width: 10%;
 }
