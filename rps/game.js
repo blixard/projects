@@ -1,17 +1,23 @@
 //rock-0
 //paper-1
 //scissor-2
-
+var score = 0
 function play(rps){
     var comp = Math.floor(Math.random()*3);
     console.log("rps : " + rps + " comp : " + comp);
     var cs = getValue(comp);
     var us = getValue(rps)
     var res = getResult(comp, rps)
+    
+    var count = 0
+    if(matchWon(res)){
+        score = score +1 
+    }
     visimg(comp)
     visimgu(rps)
     
     resimg(res)
+    document.getElementById("score").innerHTML = score
     document.getElementById("output").style.visibility = "visible";
     document.getElementById("comp").innerHTML = cs
     document.getElementById("user").innerHTML = us
@@ -108,4 +114,15 @@ function visimgu(comp){
         document.getElementById("upaper").style.visibility="hidden";
         //document.getElementById("csci").style.visibility="hidden";
     }
+}
+
+function matchWon(res){
+    if(res == "you won"){
+        return true
+    }
+    else{
+        return false
+    }
+    
+
 }
