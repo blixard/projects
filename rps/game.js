@@ -2,21 +2,24 @@
 //paper-1
 //scissor-2
 var score = 0
+var count = 0
 function play(rps){
+    count = count +1
     var comp = Math.floor(Math.random()*3);
     console.log("rps : " + rps + " comp : " + comp);
     var cs = getValue(comp);
     var us = getValue(rps)
     var res = getResult(comp, rps)
-    
-    var count = 0
     if(matchWon(res)){
         score = score +1 
     }
+    console.log(count + " " + score)
+    var luck = (score/count*100) + "%"
     visimg(comp)
     visimgu(rps)
     
     resimg(res)
+    document.getElementById("luck").innerHTML = luck
     document.getElementById("score").innerHTML = score
     document.getElementById("output").style.visibility = "visible";
     document.getElementById("comp").innerHTML = cs
