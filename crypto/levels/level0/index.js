@@ -1,10 +1,9 @@
-
+var level = 0
 console.log("working")
 MAX = 4
 var words = ["pqr" , "xyz" , "mno" , "foo"]
 var count = 0
 var count2 = 0
-var eNo = 0
 var attempts = 0
 
 function check(){
@@ -43,7 +42,7 @@ function next(){
         if(count==MAX-1){
             count = 0
             count2=1
-            document.getElementById("correct").innerHTML = "you cleared all levels in encryption "+eNo
+            document.getElementById("correct").innerHTML = "you cleared all levels in encryption "+level
             
         }
 }
@@ -54,24 +53,12 @@ function setVis(){
     count2=0
     s = words[count]
     document.getElementById("word").innerHTML = s
-    document.getElementById("level").innerHTML = "level "+(count+1)
+    document.getElementById("level").innerHTML = "stage "+(level) + " level " + (count+1)
 }
 
-//encryptions
+//encryption
 
 function encryption0(s){
     return s
 }
 
-function encryption1(s){
-    var res =""
-    for(i=0; i<s.length ; i++){
-        var c = s[i]
-        var x = c.charCodeAt(0)
-        x=x+1
-        c=String.fromCharCode(x)
-        res = res+c
-        console.log(res)
-    }
-    return res
-}
