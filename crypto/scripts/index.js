@@ -1,40 +1,61 @@
 console.log("working")
 MAX = 4
-var words = ["pqr" , "xyz" , "world" , "foo"]
+var words = ["pqr" , "xyz" , "mno" , "foo"]
 var count = 0
+var count2 = 0
+var eNo = 0
 
 function check(){
-    
-    var typed = document.getElementById("text").value
-    var res = encryption1(typed)
+    var typed = " "
+    typed = document.getElementById("text").value
+    document.getElementById("text").value = ""
+    var res = encryption0(typed)
+    if(typed==" "){
+        document.getElementById("check").innerHTML = "type bro"
+    }
     document.getElementById("check").innerHTML = res
     console.log(typed)
     if(res==s){
         document.getElementById("correct").style.visibility="visible"
+        if(count2==1){
+            document.getElementById("leveldone").style.visibility = "visible"
+            document.getElementById("mbody").style.visibility = "hidden"
+            eNo = eNo +1
+            count2=0
+        }
         console.log("correct")
-        
     }
+    
 }
 
 //button next - sub levels
 function next(){
     document.getElementById("correct").style.visibility = "hidden"
+    document.getElementById("check").innerHTML = "nothing typed"
     count = count+1
         setVis()
         if(count==MAX-1){
             count = 0
-            document.getElementById("correct").innerHTML = "you cleared all levels in encryption 1"
+            count2=1
+            document.getElementById("correct").innerHTML = "you cleared all levels in encryption "+eNo
+            
         }
 }
 
 //set visibility
 
 function setVis(){
+    count2=0
     s = words[count]
     document.getElementById("word").innerHTML = s
+    document.getElementById("level").innerHTML = "level "+(count+1)
 }
 
 //encryptions
+
+function encryption0(s){
+    return s
+}
 
 function encryption1(s){
     var res =""
