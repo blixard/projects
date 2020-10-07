@@ -14,6 +14,8 @@ var wincount = 0
 var lostcount = 0
 var count = 0  
 function loadVis(){
+    document.getElementById("home_btn").style.visibility = "hidden"
+    document.getElementById("user").style.visibility = "hidden"
     document.getElementById("comp").style.visibility = "hidden"
 }
 function game(){
@@ -30,6 +32,7 @@ function game(){
 
 function play(){
     document.getElementById("play_btn").style.visibility = "hidden"
+    document.getElementById("user").style.visibility ="visible"
     document.getElementById("com").innerHTML = "choose a card"
     game()
 }
@@ -137,6 +140,13 @@ function card_btn3(){
     document.getElementById("card_btn3").style.visibility = "hidden"
     document.getElementById("comp-card").style.visibility = "visible"
     if(count==3){
+        if(wincount > lostcount ){
+            document.getElementById("com").innerHTML = "you won"
+        }
+        else {
+            document.getElementById("com").innerHTML = "you did not win, but good try "
+        }
+        document.getElementById("home_btn").style.visibility = "visible"
         wincount = 0 
         lostcount = 0
         count = 0
