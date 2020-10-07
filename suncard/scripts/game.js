@@ -6,11 +6,18 @@ var max = 7
 //4 - ro
 //5 - half
 //6 - dark
+var comp
+var user1
+var user2
+var user3 
+function loadVis(){
+    document.getElementById("comp").style.visibility = "hidden"
+}
 function game(){
-    var comp = Math.floor(Math.random()*7)
-    var user1 = Math.floor(Math.random()*7)
-    var user2 = Math.floor(Math.random()*7)
-    var user3 = Math.floor(Math.random()*7)
+    comp = Math.floor(Math.random()*7)
+    user1 = Math.floor(Math.random()*7)
+    user2 = Math.floor(Math.random()*7)
+    user3 = Math.floor(Math.random()*7)
     console.log(" " + user1 + " " + user2 + " " + user3)
     display_user1(user1)
     display_user2(user2)
@@ -23,8 +30,56 @@ function play(){
     document.getElementById("play_btn").style.visibility = "hidden"
     game()
 }
-//user1 image
 
+
+function card_btn1(){
+    var upower = return_power(user1)
+    var cpower = return_power(comp)
+    console.log("okay so here : " + upower + " " + cpower)
+    if(upower>cpower){
+        //won
+        console.log("won")
+    }
+    else if(cpower>upower){
+        //lost
+        console.log("lost")
+    }
+    else{
+        //tie
+        console.log("tied")
+    }
+    document.getElementById("comp-card").style.visibility = "visible"
+
+}
+
+function return_power(x){
+    if(x==0){
+        return 9000
+    }
+    else if(x==1){
+        return 1000
+    }
+    else if(x==2){
+        return 500
+    }
+    else if(x==3){
+        return 300
+    }
+    else if(x==4){
+        return 100
+    }
+    else if(x==5){
+        return 50
+    }
+    else{
+        return -100
+    }
+}
+
+
+
+//displaying images
+//user1 image
 function display_user1(user1){
     if(user1==0){
         document.getElementById("uimage1").src="../suncard/res/sun.jpg"
