@@ -9,7 +9,10 @@ var max = 7
 var comp
 var user1
 var user2
-var user3 
+var user3
+var wincount = 0
+var lostcount = 0
+var count = 0  
 function loadVis(){
     document.getElementById("comp").style.visibility = "hidden"
 }
@@ -22,33 +25,122 @@ function game(){
     display_user1(user1)
     display_user2(user2)
     display_user3(user3)
-    display_comp(comp)
     console.log(comp)
 }
 
 function play(){
     document.getElementById("play_btn").style.visibility = "hidden"
+    document.getElementById("com").innerHTML = "choose a card"
     game()
 }
 
-
+//cardbutton functions 
+//button1 
 function card_btn1(){
+    count ++
     var upower = return_power(user1)
     var cpower = return_power(comp)
+    display_comp(comp)
+    comp = Math.floor(Math.random()*7)
+    var res =""
     console.log("okay so here : " + upower + " " + cpower)
     if(upower>cpower){
         //won
+        res = "won"
+        wincount = wincount + 1
         console.log("won")
     }
     else if(cpower>upower){
         //lost
+        res = "lost"
+        lostcount = lostcount+1
         console.log("lost")
     }
     else{
         //tie
+        res = "tied"
         console.log("tied")
     }
+    document.getElementById("com").innerHTML = res + " you: "+wincount + " comp: "+lostcount
+    document.getElementById("card_btn1").style.visibility = "hidden"
     document.getElementById("comp-card").style.visibility = "visible"
+    if(count==3){
+        wincount = 0 
+        lostcount = 0
+        count = 0
+    }
+
+}
+//button2 
+function card_btn2(){
+    count = count +1
+    var upower = return_power(user2)
+    var cpower = return_power(comp)
+    display_comp(comp)
+    comp = Math.floor(Math.random()*7)
+    var res =""
+    console.log("okay so here : " + upower + " " + cpower)
+    if(upower>cpower){
+        //won
+        res = "won"
+        wincount = wincount + 1
+        console.log("won")
+    }
+    else if(cpower>upower){
+        //lost
+        res = "lost"
+        lostcount = lostcount+1
+        console.log("lost")
+    }
+    else{
+        //tie
+        res = "tied"
+        console.log("tied")
+    }
+    document.getElementById("com").innerHTML = res + " you: "+wincount + " comp: "+lostcount
+    document.getElementById("card_btn2").style.visibility = "hidden"
+    document.getElementById("comp-card").style.visibility = "visible"
+    if(count==3){
+        wincount = 0 
+        lostcount = 0
+        count = 0
+    }
+
+}
+//button3 
+function card_btn3(){
+    count ++
+    var upower = return_power(user3)
+    var cpower = return_power(comp)
+    display_comp(comp)
+    comp = Math.floor(Math.random()*7)
+    var res =""
+    console.log("okay so here : " + upower + " " + cpower)
+    if(upower>cpower){
+        //won
+        res = "won"
+        wincount = wincount + 1
+        console.log("won")
+    }
+    else if(cpower>upower){
+        //lost
+        res = "lost"
+        lostcount = lostcount+1
+        console.log("lost")
+    }
+    else{
+        //tie
+        res = "tied"
+        console.log("tied")
+    }
+    document.getElementById("com").innerHTML = res + " you: "+wincount + " comp: "+lostcount
+    document.getElementById("card_btn3").style.visibility = "hidden"
+    document.getElementById("comp-card").style.visibility = "visible"
+    if(count==3){
+        wincount = 0 
+        lostcount = 0
+        count = 0
+    }
 
 }
 
