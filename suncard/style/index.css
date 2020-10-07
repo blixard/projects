@@ -1,0 +1,14 @@
+
+.card{
+    background-image: url(../res/sparkle_tra.gif);
+    background-color: black;
+    color: aliceblue;
+}
+
+button:hover{
+    background-color: fuchsia;
+}
+
+button {
+    background-color: black;
+}
