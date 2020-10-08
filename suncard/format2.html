@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/format2.css">
+    <title>Sun card</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row r0"></div>
+        <div class="row r1 "><div class="badge badge-dark"> comp</div></div>
+        <div class="row r2">small-cards</div>
+        <div class="row r3" id="comp_space">
+            <div class="col d-flex justify-content-center">
+                <button>
+                    <div class="cards" id="comp-card" >
+                        <div class="card text-center" style="width: 8rem;">
+                            <img id="cimage" src="" alt="" class="card-image-top" style="width: 100%; height: 50%; padding: 3%;">
+                            <div class="card-body">
+                                <div class="card-text" id="ctitle"></div>
+                                <div class="card-text" id="cpower"></div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </button>
+                
+            </div>
+        </div>
+        <div class="row r4">
+            <div class="col d-flex justify-content-center text-center">
+                <button onclick="game()" id="play_btn">
+                    <div class="card" style="">
+                        <div class="alert alert-danger" id="com">shuffle</div>
+                    </div>
+                    
+                </button>
+            </div>
+        </div>
+        <div class="row r5">
+            <div class="col d-flex justify-content-center">
+                <button>
+                    <div class="cards" id="comp-card" id="user_space">
+                        <div class="card text-center" style="width: 8rem;">
+                            <img id="cimage" src="" alt="" class="card-image-top" style="width: 100%; height: 50%; padding: 3%;">
+                            <div class="card-body">
+                                <div class="card-text" id="ctitle"></div>
+                                <div class="card-text" id="cpower"></div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </button>
+                
+            </div>
+        </div>
+        <div class="row r6"><div class="badge badge-dark">user</div></div>
+        <div class="row r7">small-cards</div>
+        <div class="row r8">footer</div>
+    </div>
+</body>
+</html>
