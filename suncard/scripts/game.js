@@ -222,7 +222,9 @@ function afterFinish(){
     document.getElementById("user_space").style.visibility = "hidden"
     document.getElementById("badge_user").style.visibility = "hidden"
     document.getElementById("small_cards_user").style.visibility = "hidden"
-    document.getElementById("play_btn").onclick ="none"
+    setTimeout(function(){
+        document.getElementById("play_btn").onclick =(window.location.href="../suncard/index.html")
+    },3000)
 
 }
 
