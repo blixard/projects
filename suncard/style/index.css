@@ -16,3 +16,7 @@ button {
 .small_comp{
     background-image: url("../res/q.gif");
 }
+
+body{
+    background-image: url('../res/bg1.gif');
+}
