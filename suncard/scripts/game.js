@@ -79,12 +79,13 @@ function card_btn1(){
     document.getElementById("comp_space").style.visibility = "visible"
     document.getElementById("user_space").style.visibility = "visible"
     if(count==3){
-        wincount = 0 
-        lostcount = 0
-        count = 0
+        
         setTimeout(function(){
             afterFinish()
         }, 3000);
+        wincount = 0 
+        lostcount = 0
+        count = 0
     }
 
 }
@@ -125,12 +126,13 @@ function card_btn2(){
     document.getElementById("comp_space").style.visibility = "visible"
     document.getElementById("user_space").style.visibility = "visible"
     if(count==3){
-        wincount = 0 
-        lostcount = 0
-        count = 0
+        
         setTimeout(function(){
             afterFinish()
         }, 3000);
+        wincount = 0 
+        lostcount = 0
+        count = 0
     }
 
 }
@@ -170,12 +172,13 @@ function card_btn3(){
     document.getElementById("user_space").style.visibility = "visible"
     if(count==3){
             
-        wincount = 0 
-        lostcount = 0
-        count = 0
+        
         setTimeout(function(){
             afterFinish()
         }, 3000);
+        wincount = 0 
+        lostcount = 0
+        count = 0
     }
 }
 
@@ -211,10 +214,10 @@ function afterFinish(){
         document.getElementById("com").innerHTML = "you won, woo hoo!!!!"
     }
     else if(wincount<lostcount) {
-        document.getElementById("com").innerHTML = "you did not win, but good try "
+        document.getElementById("com").innerHTML = "you have lost, sorry :("
     }
     else{
-        document.getElementById("com").innerHTML = "you have lost, sorry :("
+        document.getElementById("com").innerHTML = "you did not win, but you tied"
     }
     document.getElementById("badge_comp").style.visibility = "hidden"
     document.getElementById("small_cards_comp").style.visibility = "hidden"
