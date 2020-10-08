@@ -12,3 +12,7 @@ button:hover{
 button {
     background-color: black;
 }
+
+.small_comp{
+    background-image: url("../res/q.gif");
+}
