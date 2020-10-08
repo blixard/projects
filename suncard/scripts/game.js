@@ -81,6 +81,9 @@ function card_btn1(){
         wincount = 0 
         lostcount = 0
         count = 0
+        setTimeout(function(){
+            afterFinish()
+        }, 3000);
     }
 
 }
@@ -123,6 +126,9 @@ function card_btn2(){
         wincount = 0 
         lostcount = 0
         count = 0
+        setTimeout(function(){
+            afterFinish()
+        }, 3000);
     }
 
 }
@@ -160,18 +166,14 @@ function card_btn3(){
     document.getElementById("comp_space").style.visibility = "visible"
     document.getElementById("user_space").style.visibility = "visible"
     if(count==3){
-        if(wincount > lostcount ){
-            document.getElementById("com").innerHTML = "you won"
-        }
-        else {
-            document.getElementById("com").innerHTML = "you did not win, but good try "
-        }
-        document.getElementById("home_btn").style.visibility = "visible"
+            
         wincount = 0 
         lostcount = 0
         count = 0
+        setTimeout(function(){
+            afterFinish()
+        }, 3000);
     }
-
 }
 
 function return_power(x){
@@ -196,6 +198,28 @@ function return_power(x){
     else{
         return -100
     }
+}
+
+
+
+//after finish
+function afterFinish(){
+    if(wincount > lostcount ){
+        document.getElementById("com").innerHTML = "you won, woo hoo!!!!"
+    }
+    else if(wincount<lostcount) {
+        document.getElementById("com").innerHTML = "you did not win, but good try "
+    }
+    else{
+        document.getElementById("com").innerHTML = "you have lost, sorry :("
+    }
+    document.getElementById("badge_comp").style.visibility = "hidden"
+    document.getElementById("small_cards_comp").style.visibility = "hidden"
+    document.getElementById("comp_space").style.visibility = "hidden"
+    document.getElementById("user_space").style.visibility = "hidden"
+    document.getElementById("badge_user").style.visibility = "hidden"
+    document.getElementById("small_cards_user").style.visibility = "hidden"
+
 }
 
 
