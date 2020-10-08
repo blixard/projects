@@ -72,6 +72,7 @@ function card_btn1(){
         res = "tied"
         console.log("tied")
     }
+    keepScore(wincount,lostcount)
     document.getElementById("com").innerHTML = res 
     document.getElementById("com").style.visibility = "visible"
     document.getElementById("card_btn1").style.visibility = "hidden"
@@ -117,6 +118,7 @@ function card_btn2(){
         res = "tied"
         console.log("tied")
     }
+    keepScore(wincount,lostcount)
     document.getElementById("com").innerHTML = res 
     document.getElementById("com").style.visibility = "visible"
     document.getElementById("card_btn2").style.visibility = "hidden"
@@ -160,6 +162,7 @@ function card_btn3(){
         res = "tied"
         console.log("tied")
     }
+    keepScore(wincount,lostcount)
     document.getElementById("com").innerHTML = res 
     document.getElementById("com").style.visibility = "visible"
     document.getElementById("card_btn3").style.visibility = "hidden"
@@ -221,6 +224,12 @@ function afterFinish(){
     document.getElementById("small_cards_user").style.visibility = "hidden"
     document.getElementById("play_btn").onclick ="none"
 
+}
+
+//adding the score to the badge of comp and user
+function keepScore(us , co ){
+    document.getElementById("badge_u").innerHTML = us
+    document.getElementById("badge_c").innerHTML = co
 }
 
 
