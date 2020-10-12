@@ -1,2 +1,4 @@
 gausian elimination, to solve a system of equations
 a1x1+b1x2+c1x3;a2x1+b2x2+c2x3;a3x1+b3x2+c3x3;
+1x1+2x2+3x3=11;4x1+5x2+6x3=11;7x1+8x2+9x3=11
+2x1+1x2+1x3=5;4x1-6x2 +0x3=-2;-2x1+7x2+2x3=9
