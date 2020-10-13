@@ -66,3 +66,7 @@ function geli(){
     }
 }
 
+function fun(){
+    var i =1
+    un[un.length-i] = arr[arr.length-1][arr[arr.length-1].length]/arr[arr.length-1][arr[arr.length-1].length]  
+}
