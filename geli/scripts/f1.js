@@ -1,6 +1,35 @@
 console.log("hi there")
 
 var matrix =  new Array(5)
+var num = 0 
+
+function setP(){
+    var address = window.location.href;
+    var equation = address.split("equations=");
+    num = equation[1];
+    for(var i = 0 ; i<5 ; i++){
+        document.getElementById("eq"+(i+1)).style.visibility = "hidden";
+    }
+
+    for(var i = 0 ; i<num ; i++){
+        document.getElementById("eq"+(i+1)).style.visibility = "visible"
+    }
+
+    for(var k = 0 ; k<5 ; k++){
+        for(var l = 0 ; l < 6 ; l++){
+            document.getElementById("eq"+(k+1)+"c"+(l+1)).style.visibility = "hidden";
+        }
+    }
+    
+    for(var i = 0 ; i<num ; i++){
+        document.getElementById("eq"+(i+1)+"c"+6).style.visibility = "visible";
+        
+        for(var j = 0 ; j < num ; j++){
+        document.getElementById("eq"+(i+1)+"c"+(j+1)).style.visibility = "visible";
+        }
+    }
+    console.log(num) 
+}
 
 function solve(){
     
@@ -23,10 +52,14 @@ function solve(){
     // for(var i=0; i<5; i++){
     //     resMat = resMat + "r"+(i+1) + " : "+matrix[i] + " ";
     // }
-    for(var i = 0 ; i<5; i++){
-        document.getElementById("matrixr"+(i+1)).innerHTML = matrix[i]
 
+    //displaying the matrix on the page
+    for(var i = 0 ; i<num ; i++){
+        for(var j = 0 ; j <num ; j++){
+            document.getElementById("matrixr"+(i+1) + "c"+(j+1)).innerHTML = matrix[i][j]
+        }
     }
+     
     
 }
 
