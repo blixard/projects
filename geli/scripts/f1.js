@@ -2,6 +2,8 @@ console.log("hi there")
 
 var matrix =  new Array(5)
 var num = 0 
+var row = num
+var col =  num
 
 function setP(){
     var address = window.location.href;
@@ -55,9 +57,14 @@ function solve(){
 
     //displaying the matrix on the page
     for(var i = 0 ; i<num ; i++){
-        for(var j = 0 ; j <num ; j++){
+        for(var j = 0 ; j <num  ; j++){
             document.getElementById("matrixr"+(i+1) + "c"+(j+1)).innerHTML = matrix[i][j]
         }
+    }
+     
+    for(var i = 0 ; i<num ; i++){
+            document.getElementById("matrixr"+(i+1) + "c"+(6)).innerHTML = matrix[i][j]
+        
     }
      
     
