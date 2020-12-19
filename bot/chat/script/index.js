@@ -5,6 +5,7 @@ var replies = [
 
 function fun(){
     var s = document.getElementById("userIp").value;
+    s = s.toLowerCase();
     fun2(s);
 }
 
