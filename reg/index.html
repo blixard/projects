@@ -10,6 +10,7 @@
         .body{
             margin: 5%;
             padding: 2%;
+            background-color: azure;
         }
         .abc{
             background-color: black;
@@ -18,11 +19,13 @@
     </style>
 </head>
 <body style="margin: 10%;">
-    <input type="text" class="row" id="exp" name="expression" value="expression">
-    <input type="text" class="row" id="text" name="string" value="string">
-    <button onclick="find()" class="btn btn-primary">
-    match
-    </button>
-    <div id="op" class="abc"></div>
+    <input type="text" class="row container-fluid" id="exp" name="expression" value="expression">
+    <input type="text" class="row container-fluid" id="text" name="string" value="string">
+    <div class=" row container-fluid" role="group" aria-label="Basic example">
+        <button type="button" onclick="find()" class="col btn btn-primary">match</button>
+        <button type="button" class="col btn btn-primary">find</button>
+        <button type="button" class="col btn btn-primary">find all</button>
+      </div>
+    <div id="op" class="abc row container-fluid"></div>
 </body>
 </html>
