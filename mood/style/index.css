@@ -31,9 +31,11 @@ body{
     background-color: lightslategray;
 }
 .btn:hover{
+   
     font-size: xx-large;
     font-style: normal;
     font-variant: small-caps;
+    color: lightslategray;
 }
 .btn{
     margin-left: 0px;
