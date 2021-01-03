@@ -1,0 +1,69 @@
+*{
+    margin: 1px;
+    padding: 1px;
+}
+
+.play_btn{
+    border-style: dotted;
+    border-color:darkmagenta;
+    font-weight: bolder;
+    color: darkmagenta;
+    background-color: lightslategray;  
+}
+.menu{
+    border-style: dotted;
+    border-color:darkmagenta;
+    font-weight: bolder;
+    color: darkmagenta;
+    background-color: lightslategray;  
+}
+.menu:hover,.play_btn:hover{
+    background-color: violet;
+    color: lightslategray;
+}
+
+.title{
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color: lightslategray;
+}
+.btn:hover{
+    font-size: xx-large;
+    font-style: normal;
+    font-variant: small-caps;
+}
+.btn{
+    margin-left: 0px;
+    font-family: cursive;
+    font-size: x-large;
+    font-weight: bolder;
+    border-color: violet;
+    font-style: italic;
+    background-color: black;
+    color: azure;
+}
+.btn1{
+    top: 1;
+    left: 0;
+    position: fixed;
+    width: 50%;
+    height: 60%;
+}
+.btn2{
+    top: 1;
+    right: 0;
+    position: fixed;
+    width: 50%;
+    height: 60%;
+}
+.btn3{
+    left: 0;
+    right: 0;
+    height: 40%;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
