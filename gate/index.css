@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    height: 100vh;
+    margin:0px;
+    padding: 0px;
+    display:grid;
+    place-items: center;
+
+}
+
+.container .list{
+    margin:15px;
+    padding: 15px;
+    display:grid;
+    place-items: center;
+}
+
+li{
+    list-style: none;
+}
+
+.container .list h1{
+    font-size:20px;
+    padding: 30px
+}

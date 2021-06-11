@@ -1,0 +1,16 @@
+.box{
+  width: 250px;
+  height: 250px;
+}
+
+img{
+  width: 100%;
+}
+
+.page1 {
+  height:100vh;
+}
+
+.page2{
+  height:100vh;
+}
