@@ -7,6 +7,10 @@ window.addEventListener("DOMContentLoaded", (e)=>{
     animatePage4()
 })
 
+if(document.readyState=='loading'){
+    console.log("loading")
+}
+
 animatePage1 = ()=>{
     var tl = gsap.timeline()
     tl.from(".img1",{
