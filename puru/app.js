@@ -2,7 +2,7 @@
 var playing = false;
 window.addEventListener("DOMContentLoaded", (e)=>{
     var loader = document.getElementById("loader")
-    loader.remove()
+    // loader.remove()
     animatePage1()
     animatePage2()
     animatePage3()
