@@ -1,8 +1,8 @@
 // gsap.to(".box", {x: 100, duration: 1});
 var playing = false;
 window.addEventListener("DOMContentLoaded", (e)=>{
-    var loader = document.getElementById("loader")
-    // loader.remove()
+    var loader = document.getElementById("loading")
+    loader.remove()
     animatePage1()
     animatePage2()
     animatePage3()
