@@ -1,5 +1,5 @@
 // gsap.to(".box", {x: 100, duration: 1});
-
+var playing = false;
 window.addEventListener("DOMContentLoaded", (e)=>{
     animatePage1()
     animatePage2()
@@ -116,4 +116,18 @@ function fun(){
         document.querySelector(".menu").style.left="-100%";
         flag = false;
     }
+}
+
+function playvid(){
+   var vid =  document.getElementById("v1");
+   if(playing == false){
+    vid.play()
+    playing = true
+   }
+   else{
+       vid.pause()
+       playing = false
+   }
+   
+   console.log("yooooo")
 }
