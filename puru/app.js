@@ -1,12 +1,30 @@
 // gsap.to(".box", {x: 100, duration: 1});
 var playing = false;
 window.addEventListener("DOMContentLoaded", (e)=>{
-    var loader = document.getElementById("loading")
-    loader.remove()
-    animatePage1()
-    animatePage2()
-    animatePage3()
-    animatePage4()
+    var imgs = document.images,
+    len = imgs.length,
+    counter = 0;
+
+    [].forEach.call( imgs, function( img ) {
+        if(img.complete)
+        incrementCounter();
+        else
+        img.addEventListener( 'load', incrementCounter, false );
+    } );
+
+    function incrementCounter() {
+        counter++;
+        if ( counter === len ) {
+            var loader = document.getElementById("loading")
+            loader.remove()
+            console.log( 'All images loaded!' );
+            animatePage1()
+            animatePage2()
+            animatePage3()
+            animatePage4()
+        }
+    }
+
 })
 
 if(document.readyState=='loading'){
