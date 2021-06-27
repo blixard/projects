@@ -1,0 +1,553 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
+body{
+  margin:0px;
+  padding:0px;
+}
+
+.page1 img{
+  position:relative;
+  padding:0.5px;
+  width:25%;
+  opacity:0.8;
+  filter:blur(5px);
+}
+
+.page1 img:hover{
+  opacity:1;
+  filter:blur(0px);
+  transition:all 0.45s;
+}
+
+
+
+/* nav */
+
+.key{
+  z-index: 2;
+  position:fixed;
+  top:3%;
+  right:5%;
+}
+.key button{
+  background:none;
+  border:none;
+  font-size:40px;
+  outline:none;
+}
+
+.key button:hover{
+  color:#fff;
+}
+
+/* menu */
+.menu{
+  position:fixed;
+  z-index: 1;
+  top:0%;
+  width:40%;
+  height:100vh;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  background-color: rgba(0,0,0,0.8);
+  left:-100%;
+  transition:all .5s;
+}
+
+
+.menu ul{
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-flow:column;
+  text-align:center;
+  padding:2px;
+  margin-top: 100px;
+}
+.menu ul li{
+  display: block;
+  line-height: 80px;
+}
+.menu ul li a{
+  text-decoration: none;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 17px;
+  padding: 7px 5px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.menu ul li a:hover,a:active{
+  background:linear-gradient(90deg, rgba(0,0,255,1) 5%, rgba(75,87,124,1) 41%, rgba(91,76,181,1) 71%, rgba(255,0,255,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.menu .closebtn button{
+  font-size: 20px;
+  position: absolute;
+  top :3%;
+  right: 7%;
+  transform: translate(-5%,0%);
+  margin-top: 5px;
+  padding: 5px;
+  background:none;
+  border: none;
+  outline:none;
+}
+
+.menu .closebtn button:hover{
+  background: rgba(255,255, 255, .2);
+  border-radius: 50%;
+}
+
+/* menu end */
+
+/* nav end */
+
+/* webarea start*/
+.webarea{
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+  margin-bottom: 20px;
+}
+
+.title{
+  font-size:50px;
+}
+/* webarea end */
+
+
+/* page 1 */
+
+.page1{
+  height: 100vh;
+  display:flex;
+  flex-wrap:wrap;
+  background-color:white;
+}
+
+.page1 .content{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.page1 .title a{
+  text-decoration:none;
+  color: black;
+  font-size: 50px;
+}
+
+.page1  .title a:hover{
+  background:linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page1 .title #homelogo{
+  opacity: 1;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform:translate(-49%,0%);
+  filter: blur(0px);
+}
+
+/* page 1 ended */
+
+/* page 2 */
+
+.page2{
+  background: url('./img/mountainbig.webp')no-repeat;
+  background-size: 100%;
+  background-color:white;
+  height: 100vh;
+  margin-top: 20px;
+  margin-bottom: 300px;
+}
+
+.page2 .container{
+  height:100%;
+}
+
+.page2 .head{
+  padding: 50px;
+  font-size:40px;
+  color: white;
+}
+
+.page2 .head .title{
+  font-size:60px;
+  font-weight:bold;
+}
+
+.page2 .main{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 20px;
+  padding: 20px;
+  height:60vh;
+}
+
+.page2 .main .view{
+  width: 50%;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  background-color: rgba(255,255,255,.15);
+  margin: 2px;
+  padding:15px;
+  border-radius: 1%;
+}
+
+.page2 .knowmore{
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.page2 .knowmore a{
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, .2);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  color:blue;
+}
+
+.page2 .knowmore a:hover{
+  background-color:rgba(255, 255, 255, .8);
+  color:green;
+}
+
+/* page 2 ends */
+
+/* page 3 starts*/
+.page3{
+  height: 100%;
+}
+
+.page3 .container{
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 300px;
+}
+
+.page3 .container .main{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  text-align: center;
+  width: 50%;
+
+}
+
+.page3 .container .main .head{
+  font-size: 40px;
+}
+
+.page3 .container .main .icons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+}
+
+.page3 .container .main .icons a{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px;
+}
+
+.page3 .formc{
+  margin-left: 50px;
+  padding-top: 80px;
+  padding-left: 20px;
+  width:40%;
+  height:100vh;
+  display: flex;
+  flex-flow: column;
+  flex-direction: column;
+  line-height: 45px;
+  border-radius: 10px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+}
+
+.page3 .formc input{
+  margin: 5px;
+  padding: 2px;
+  height: 25px;
+  width: 80%;
+  box-shadow: 0 0 1rem 0 rgba(10, 10, 10, .1); 
+  border: none;
+  border-radius: 2px;
+}
+
+.page3 .formc label{
+  margin-left: 10px;
+}
+
+.page3 .formc #extra{
+  box-shadow: 0 0 1rem 0 rgba(10, 10, 10, .1); 
+  border: none;
+  border-radius: 2px;
+  width: 80%;
+  height: 100px;
+}
+
+.page3 .formc button{
+  margin-top: 20px;
+  width: 80%;
+  height: 60px;
+  border:none;
+  background: rgba(24, 165, 87, 0.2);
+  border-radius: 2px;
+  box-shadow: 0 0 1rem 0 rgba(10, 10, 10, 0.1); 
+  outline: none;
+}
+
+.page3 .formc button:hover{
+  background: rgba(24, 165, 87, 0.8);
+  border-radius: 2px;
+  box-shadow: 0 0 1rem 0 rgba(10, 10, 10, 0.2); 
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+/* page 3 ends*/
+
+/* page 4 starts */
+.page4{
+  height: 100vh;
+  margin-bottom: 300px;
+}
+
+.page4 .container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page4 .container .head{
+  width: 100%;
+  font-size: 40px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page4 .container .main{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.page4 .container .main .teamview{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height:500px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  background-color: rgba(255,255,255,.15);
+}
+
+.page4 .container .main .teamview .title{
+  font-size:30px;
+  margin-top: 30px;
+}
+
+.page4 .container .main .teamview .position{
+  font-size:15px;
+}
+
+.page4 .container .main .teamview .desc{
+  font-size:17px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.page4 .container .main .teamview img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+/* page 4 ends */
+
+/* footer start */
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,.8);
+  color:white;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+}
+/* footer end */
+
+/* responsive */
+
+
+@media(max-width:850px) {
+  .page3 .formc{
+    margin-left:2px;
+    width: 100%;
+  }
+
+  .page3 .container .main{
+    margin-top: 100px;
+  }
+
+  .page3 .container .formc{
+    height: 100%;
+    margin:2px;
+    padding: 5px;
+    align-items: center;
+  }
+
+  .page4{
+    height: 100%;
+  }
+
+}
+
+
+@media(max-width:600px) {
+  .page1 img{
+    width:50%;
+  }
+  .fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+
+  .page3 .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page4 .container .main{
+    flex-direction: column;
+  }
+
+  .page2 .main .view{
+    width:100%;
+  }
+}
+
+@media(max-height:550px) {
+  .menu ul{
+    margin-top:0px;  
+  }
+}
+
+@media(max-height:450px) {
+  .menu ul{
+    margin-top:0px;  
+  }
+  .page2 .main{
+    display: none;
+  }
+  .page3 .container .main {
+    display: none;
+    line-height:40px;
+  }
+  .page4{
+    height:100%;
+  }
+}
+
+
+
+@media(max-width:424px) {
+  .menu{
+    top:0%;
+    width:60%;
+    height:100 vh;
+  }
+  .page2{
+    background: url('./img/mountainbig.webp')no-repeat;
+    background-clip: content-box;
+    background-color:white;
+  }
+}
+
+@media(max-width:370px) {
+  .page2 .main .view{
+    font-size: 12px;
+  }
+}
