@@ -19,7 +19,7 @@ body{
   border-radius: 50%;
   width: 100vh;
   height: 100vh;
-  animation: spin 10s linear infinite;
+  animation: spin 15s linear infinite;
   position: fixed;
 }
 
@@ -28,6 +28,11 @@ body{
   100% { transform: rotate(360deg); }
 }
 
+@keyframes blurT {
+  0% {filter:blur(5px);}
+  50% { filter:blur(0px); }
+  100% { filter:blur(5px); }
+}
 
 .page1 img{
   position:relative;
@@ -35,12 +40,14 @@ body{
   width:25%;
   opacity:0.8;
   filter:blur(5px);
+  animation: blurT 5s linear infinite ;
 }
 
 .page1 img:hover{
   opacity:1;
   filter:blur(0px);
   transition:all 0.45s;
+  animation: 0s;
 }
 
 
