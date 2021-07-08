@@ -39,7 +39,7 @@ animatePage1 = ()=>{
                 trigger:".page1",
                 markers:true,
                 start:"top",
-                end:"+=2000",
+                end:"+=1400",
                 scrub:"1"
             },
         }
@@ -70,22 +70,6 @@ animatePage1 = ()=>{
     tl.from(".img8",{
         yPercent:-10,
         xPercent:-40
-    })
-    tl.from(".mid",{
-        xPercent:-10
-    })
-    tl.from(".img9",{
-        xPercent:-10
-    })
-    tl.from(".img10",{
-        yPercent:-10,
-        xPercent:-20
-    })
-    tl.from(".img11",{
-        xPercent:-30
-    })
-    tl.from(".img12",{
-        yPercent:-40
     })
 }
 
