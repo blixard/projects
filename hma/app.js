@@ -32,18 +32,7 @@ if(document.readyState=='loading'){
 }
 
 animatePage1 = ()=>{
-    var tl = gsap.timeline(
-        {
-            scrollTrigger:{
-                duration:2,
-                trigger:".page1",
-                markers:true,
-                start:"top",
-                end:"+=1400",
-                scrub:"1"
-            },
-        }
-    )
+    var tl = gsap.timeline()
     tl.from(".img1",{
         xPercent:-10,
         rotate:10
