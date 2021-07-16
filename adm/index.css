@@ -1,12 +1,8 @@
 *{
     margin: 0;
-    padding: 0;
+    padding: 5px;
 }
 
-body{
-    display: grid;
-    place-items: center;
-}
 
 .main{
     height: 100vh;
@@ -51,4 +47,26 @@ body{
     margin: 4px;
     display: grid;
     place-items: center;
+}
+
+.main .inclusion .grid .input input{
+    height: 40px;
+    width: 160px;
+    padding: 4px;
+    margin: 4px;
+    border-radius: 4px;
+}
+
+.main .inclusion .grid .input .range{
+    display: grid;
+    place-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.main .inclusion .grid .input .nd{
+    display: grid;
+    place-items: center;
+    margin: 10px;
+    padding: 10px;
 }
