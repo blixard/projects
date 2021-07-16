@@ -10,7 +10,6 @@ body{
 
 .main{
     height: 100vh;
-    padding: 5px;
     display:grid;
     place-items: center;
     align-items: center;
